@@ -17,7 +17,7 @@
 SRC=$(realpath $(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd))
 
 ATTEMPTS=10
-BASE=/media/src
+BASE=$(pwd)
 JOBS=$((`nproc` + 2))
 TTL=86400
 UPDATE=0

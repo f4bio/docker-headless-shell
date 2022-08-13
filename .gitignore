@@ -3,3 +3,5 @@
 /out/
 /depot_tools/
 /icecc-chromium/
+/chromium/
+/.vscode/

@@ -7,7 +7,7 @@
 SRC=$(realpath $(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd))
 
 ATTEMPTS=10
-BASE=/media/src
+BASE=$(pwd)
 CHANNELS=
 CLEANUP=1
 JOBS=$((`nproc` + 2))
@@ -92,7 +92,7 @@ if [ -z "$CHANNELS" ]; then
 fi
 
 export PATH=$PATH:$HOME/src/misc/chrome/depot_tools
-export CHROMIUM_BUILDTOOLS_PATH=/media/src/chromium/src/buildtools
+export CHROMIUM_BUILDTOOLS_PATH=$BASE/chromium/src/buildtools
 
 pushd $SRC &> /dev/null
 
